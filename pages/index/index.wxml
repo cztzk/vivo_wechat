@@ -1,0 +1,52 @@
+<view class="weui-flex official">
+  <view class="weui-flex__item">
+    官方正品
+  </view>
+  <view class="weui-flex__item">
+    满68包邮
+  </view>
+  <view class="weui-flex__item">
+    30天退换货
+  </view>
+  <view class="weui-flex__item">
+    全国网点售后
+  </view>
+</view>
+<swiper indicator-dots="{{indicatorDots}}" circular="{{circular}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item.img}}" class="slide-image"  alt="{{item.name}}"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="weui-flex Subnav_box">
+  <view class="weui-flex__item">
+    <navigator url="/pages/phList/phList" hover-class="navigator-hover">
+      <image src='../../images/xuangou.jpg'></image>
+    </navigator>
+  </view>
+  <view class="weui-flex__item">
+    <navigator url="/pages/phList/phList" hover-class="navigator-hover">
+      <image src='../../images/peijian.jpg'></image>
+    </navigator>
+  </view>
+  <view class="weui-flex__item">
+    <navigator url="/pages/phList/phList" hover-class="navigator-hover">
+      <image src='../../images/pingbao.jpg'></image>
+    </navigator>
+  </view>
+  <view class="weui-flex__item">
+    <navigator url="/pages/phList/phList" hover-class="navigator-hover"> 
+      <image src='../../images/dingzhi.jpg'></image>
+    </navigator>
+  </view>
+</view>
+<view class='product_cont'>
+  <view class='title'>爆款产品</view>
+  <view class='datu'>
+    <image src='{{datu}}'></image>
+  </view>
+  <import src="../../template/template.wxml" />
+   <template is="productList" data="{{product}}"></template>
+</view>

@@ -1,0 +1,46 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/phList/phList",
+    "pages/parts/parts",
+    "pages/detail/detail",
+    "pages/news/news",
+    "pages/newsdetail/newsdetail",
+    "pages/classify/classify",
+    "pages/my/my"    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "vivo商城",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "selectedIconPath": "images/tab_active_1.png",
+        "iconPath": "images/tab_1.png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "分类",
+        "selectedIconPath": "images/tab_active_2.png",
+        "iconPath": "images/tab_2.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "动态",
+        "selectedIconPath": "images/tab_active_3.png",
+        "iconPath": "images/tab_3.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "selectedIconPath": "images/tab_active_4.png",
+        "iconPath": "images/tab_4.png"
+      }
+    ]
+  }
+}

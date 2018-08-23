@@ -1,0 +1,5 @@
+<!--pages/phList/phList.wxml-->
+<view class='phlist_box'>
+  <import src="../../template/template.wxml" />
+  <template is="productList" data="{{product}}"></template>
+</view>

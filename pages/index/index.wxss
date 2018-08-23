@@ -1,0 +1,45 @@
+/**index.wxss**/
+@import "../../template/template.wxss";
+
+.official>view {
+  font-size: 28rpx;
+  text-align: center;
+  padding: 20rpx 0;
+  background: #fff;
+}
+
+swiper, swiper image {
+  width: 750rpx;
+  height: 510rpx;
+}
+
+.Subnav_box {
+  background: #fff;
+}
+
+.Subnav_box>view {
+  padding: 25rpx 15.75rpx;
+}
+
+.Subnav_box image {
+  width: 150rpx;
+  height: 150rpx;
+  display: block;
+}
+
+.navigator-hover {
+  background: #fff;
+}
+
+.product_cont .title {
+  padding: 20rpx;
+  background: #fff;
+}
+
+.product_cont .datu image {
+  width: 750rpx;
+  height: 310rpx;
+  display: block;
+  background: #fff;
+  padding-bottom: 40rpx;
+}

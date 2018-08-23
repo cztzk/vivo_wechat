@@ -1,0 +1,29 @@
+<!-- 产品列表 -->
+<template name="productList">
+  <view class='product_list flex_wrap'>
+    <view class='product_item' wx:for="{{product}}" wx:key="index">
+      <navigator url='/pages/detail/detail?id={{item.id}}'>
+        <view class='product_img'>
+          <image src='{{item.homeImg}}'></image>
+        </view>
+        <view class='name'>{{item.homeName}}</view>
+        <view class='nametwo'>{{item.homeNametwo}}</view>
+        <view class='price'>￥{{item.homePrice}}</view>
+      </navigator>
+    </view>
+  </view>
+</template>
+<template name="newsList">
+  <view class='news_list'>
+    <view class='news_item' wx:for="{{news}}" wx:key="index">
+      <navigator url='/pages/newsdetail/newsdetail?id={{item.id}}' hover-class='navigator-hover'>
+        <view class='news_title'>{{item.newsTitle}}</view>
+        <view class='news_img'>
+          <image src='{{item.newsImg}}'></image>
+        </view>
+        <view class='news_des'>{{item.newsCon}}</view>
+        <view class='news_date'>发布日期：{{item.newsTime}}</view>
+      </navigator>
+    </view>
+  </view>
+</template>

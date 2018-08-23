@@ -1,0 +1,4 @@
+/* pages/newsdetail/newsdetail.wxss */
+.newsdetail_box{
+  padding: 20rpx;
+}

@@ -1,0 +1,5 @@
+<!--pages/newsdetail/newsdetail.wxml-->
+<view class='newsdetail_box'>
+  <import src="../../wxParse/wxParse.wxml" />
+  <template is="wxParse" data="{{wxParseData:detail.nodes}}" />
+</view>

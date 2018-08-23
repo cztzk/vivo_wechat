@@ -1,0 +1,21 @@
+<!--pages/classify/classify.wxml-->
+<view class='classify_left'>
+  <block wx:for="{{nav}}" wx:key="index">
+    <view class='{{index==active?"active":""}}' bindtap='toggleClass' data-index="{{index}}">
+      {{item.name}}
+    </view>
+  </block>
+</view>
+<scroll-view class='classify_right' scroll-into-view="{{toView}}" scroll-y="true" scroll-with-animation="true">
+  <view class='classify_cont flex_wrap' wx:for="{{cont}}" wx:key="index" id="{{ 'inToView'+index}}">
+    <view class='classify_title'>--{{nav[index].name}}--</view>
+    <view class='classify_cont_item' wx:for="{{item.rigth_data}}" wx:for-item="items" wx:key="id">
+      <navigator url='/pages/detail/detail?id={{items.id}}'>
+        <view class='class_img'>
+          <image src='{{items.img}}' alt="{{items.name}}"></image>
+        </view>
+        <view class='class_name'>{{items.name}}</view>
+      </navigator>
+    </view>
+  </view>
+</scroll-view>
