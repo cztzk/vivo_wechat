@@ -1,5 +1,13 @@
 <!--pages/phList/phList.wxml-->
+<view class='ph_tab flex-center'>
+  <view wx:for="{{title}}" wx:key="index" bindtap='toggletab' class='{{index==seleted?"active":""}}' data-id="{{index}}">{{item.name}}</view>
+</view>
+<view class='sort_box flex-center'>
+  <view>价格升序</view>
+  <view>价格降序</view>
+  <view>销量优先</view>
+</view>
 <view class='phlist_box'>
   <import src="../../template/template.wxml" />
-  <template is="productList" data="{{product}}"></template>
+  <template is="phList" data="{{product}}"></template>
 </view>

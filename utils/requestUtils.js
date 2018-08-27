@@ -13,15 +13,15 @@ function requestData(data, method, success) {
       'content-type': 'application/json'
     },
     method: method,
-    dataType: '',
+    dataType: 'json',
     success: function(res) {
       console.log(res.data.code)
-      if(res.data.code==0){
+      if (res.data.code == 0) {
         wx.hideLoading();
         success(res);
-      }else{
+      } else {
         wx.hideLoading();
-        wx,wx.showModal({
+        wx, wx.showModal({
           title: '提示',
           content: '数据异常，返回首页',
           showCancel: true,
@@ -38,13 +38,12 @@ function requestData(data, method, success) {
           },
         })
       }
-      
     },
     fail: function(err) {
       console.log(err);
     }
   })
-}
+};
 
 module.exports = {
   requestData: requestData,

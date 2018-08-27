@@ -1,12 +1,11 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/phList/phList",
-    "pages/parts/parts",
-    "pages/detail/detail",
     "pages/news/news",
     "pages/newsdetail/newsdetail",
     "pages/classify/classify",
+    "pages/phList/phList",
+    "pages/detail/detail",
     "pages/my/my"    
   ],
   "window":{

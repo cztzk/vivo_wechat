@@ -1,2 +1,86 @@
 <!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<view class='detail_box'>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{datail.homeSwipe}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item.swipe}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='detail_info'>
+    <view class='name'>{{datail.homeName}}</view>
+    <view class='dec'>
+      <text>【{{datail.homeBright}}】</text> {{datail.homeTitle}}
+    </view>
+    <view class='price'>￥{{datail.homePrice}}</view>
+  </view>
+</view>
+<!-- 购物车按钮容器 -->
+<view class='num_box flex'>
+  购买数量：
+  <view class="stepper">
+    <!-- 减号 -->
+    <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+    <!-- 数值 -->
+    <input type="number" bindchange="bindManual" value="{{num}}" />
+    <!-- 加号 -->
+    <text class="{{maxStatus}}" bindtap="bindPlus">+</text>
+  </view>
+</view>
+<view class="category align-items">
+  <view class="category-con align-items">
+    <text class="iconfont icon-chenggong"></text>
+    <p>支持花呗分期</p>
+  </view>
+  <view class="category-con align-items">
+    <text class="iconfont icon-chenggong"></text>
+    <p>支持以旧换新</p>
+  </view>
+  <view class="category-rigth">
+    <text class="iconfont icon-gengduo"></text>
+  </view>
+</view>
+<!-- 分类 -->
+<view class='tab_box'>
+  <view class='tab_head flex-center'>
+    <view data-index="0" bindtap='tabClick' class='{{tabIndex==0?"active":""}}'>产品详情</view>
+    <view data-index="1" bindtap='tabClick' class='{{tabIndex==1?"active":""}}'>产品参数</view>
+    <view class='tab_mask' style="left: {{sliderLeft}}%;"></view>
+  </view>
+  <view class='tab_cont'>
+    <view wx-if="{{tabIndex==0}}">
+      <import src="../../wxParse/wxParse.wxml" />
+      <template is="wxParse" data="{{wxParseData:detail.nodes}}" />
+    </view>
+    <view wx-if="{{tabIndex==1}}">产品参数</view>
+  </view>
+</view>
+<view class="weui-flex detail_foot">
+  <view class="weui-flex__item left_box">
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <image src='http://p6563v2ck.bkt.clouddn.com/%E5%BA%97%E9%93%BA_2.png'></image>
+        <view class="placeholder">店铺</view>
+      </view>
+      <view class="weui-flex__item">
+        <image src='http://p6563v2ck.bkt.clouddn.com/%E5%BA%97%E9%93%BA_2.png'></image>
+        <view class="placeholder">收藏</view>
+      </view>
+      <view class="weui-flex__item">
+        <image src="http://p6563v2ck.bkt.clouddn.com/%E8%B4%AD%E7%89%A9%E8%BD%A6.png"></image>
+        <view class="weui-badge">8</view>
+        <view class="placeholder">购物车</view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-flex__item right_box">
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        加入购物车
+      </view>
+      <view class="weui-flex__item">
+        提交订单
+      </view>
+    </view>
+  </view>
+</view>

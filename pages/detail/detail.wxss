@@ -1,1 +1,194 @@
 /* pages/detail/detail.wxss */
+@import "../../template/template.wxss";
+
+page {
+  background: #fff;
+}
+
+swiper {
+  width: 750rpx;
+  height: 510rpx;
+}
+
+.slide-image {
+  width: 510rpx;
+  height: 510rpx;
+  margin: 0 120rpx;
+}
+
+.detail_info {
+  padding: 25rpx;
+}
+
+.detail_info .name {
+  font-size: 30rpx;
+}
+
+.detail_info .dec {
+  font-size: 24rpx;
+}
+
+.detail_info .dec text {
+  color: #ff4b3d;
+  font-size: 24rpx;
+}
+
+.detail_info .price {
+  font-size: 50rpx;
+  color: #f81200;
+}
+
+/*主容器*/
+
+.num_box {
+  padding: 25rpx 25rpx;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.stepper {
+  width: 80px;
+  height: 25px;
+  /*给主容器设一个边框*/
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  line-height: 25px;
+}
+
+/*加号和减号*/
+
+.stepper text {
+  width: 19px;
+  line-height: 20px;
+  text-align: center;
+  float: left;
+}
+
+/*数值*/
+
+.stepper input {
+  width: 40px;
+  height: 20px;
+  float: left;
+  text-align: center;
+  font-size: 12px;
+  min-height: 20px;
+  /*给中间的input设置左右边框即可*/
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+/*普通样式*/
+
+.stepper .normal {
+  color: black;
+}
+
+/*禁用样式*/
+
+.stepper .disabled {
+  color: #ccc;
+}
+
+.category {
+  padding: 15rpx 25rpx;
+  position: relative;
+}
+
+.category-con {
+  padding-right: 20rpx;
+  vertical-align: middle;
+}
+
+.category .icon-chenggong {
+  color: #0098df;
+}
+
+.category .category-rigth {
+  position: absolute;
+  right: 25rpx;
+}
+
+/* 分类 */
+
+.tab_box .tab_head {
+  border-top: 30rpx solid #f4f4f4;
+  position: relative;
+  padding-bottom: 130rpx;
+}
+
+.tab_box .tab_head > view:not(:last-child) {
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.tab_box .tab_head > view.active {
+  color: #26a2ff;
+}
+
+.tab_box .tab_head .tab_mask {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  border-bottom: 1px solid #26a2ff;
+  transition: left 0.5s linear;
+  -webkit-transition: left 0.5s linear;
+  -o-transition: left 0.5s linear;
+  -moz-transition: left 0.5s linear;
+  -ms-transition: left 0.5s linear;
+}
+
+.tab_box .tab_cont view {
+  margin: 20rpx 25rpx;
+}
+
+.detail_foot {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  text-align: center;
+  background: #fff;
+  color: #767676;
+  border-top: 1px solid #ddd;
+}
+
+.detail_foot view {
+  font-size: 24rpx;
+}
+
+.detail_foot .right_box {
+  line-height: 106rpx;
+  height: 106rpx;
+}
+
+.detail_foot .right_box .weui-flex__item {
+  background: #ff9800;
+  color: #fff;
+}
+
+.detail_foot .right_box .weui-flex__item:last-child {
+  background: #e3211e;
+}
+
+.detail_foot image {
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.detail_foot .weui-flex__item {
+  position: relative;
+}
+.detail_foot>.weui-flex__item.left_box .weui-flex__item{
+  padding: 10rpx 0;
+}
+.detail_foot .weui-badge {
+  position: absolute;
+  top: 0rpx;
+  right: 20rpx;
+}

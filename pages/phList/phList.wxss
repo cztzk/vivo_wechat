@@ -1,2 +1,39 @@
 /* pages/phList/phList.wxss */
-@import "../../template/template.wxss"
+@import "../../template/template.wxss";
+
+.sort_box, .ph_tab {
+  background: #fff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.sort_box {
+  background: #f4f4f4;
+  top: 70rpx;
+}
+
+.sort_box>view, .ph_tab>view {
+  width: 25%;
+  text-align: center;
+  font-size: 30rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid transparent;
+}
+
+.ph_tab>view.active {
+  color: #25b5fe;
+  border-bottom: 1px solid #25b5fe;
+}
+
+.sort_box>view {
+  width: 33.3%;
+}
+
+.phlist_box {
+  padding-top: 140rpx;
+}
