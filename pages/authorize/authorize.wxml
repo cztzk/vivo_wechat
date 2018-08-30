@@ -1,0 +1,6 @@
+<!--pages/authorize/authorize.wxml-->
+<view class='text_center'>
+  <view class='title'>vivo小程序</view>
+  <view>vivo小程序申请授权，以便为您提供更好的服务,vivo小程序申请授权，以便为您提供更好的服务,vivo小程序申请授权，以便为您提供更好的服务。。。</view>
+  <button class="weui-btn" open-type="getUserInfo" type="primary" bindgetuserinfo="bindgetuserinfo">确定</button>
+</view>

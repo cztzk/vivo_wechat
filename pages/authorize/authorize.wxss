@@ -1,0 +1,9 @@
+/* pages/authorize/authorize.wxss */
+.text_center{
+  text-align: center;
+  padding: 25rpx;
+}
+.title{
+  padding-bottom: 30rpx;
+  font-size: 40rpx;
+}
